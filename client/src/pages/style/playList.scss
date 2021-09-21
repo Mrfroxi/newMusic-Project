@@ -1,0 +1,31 @@
+.PlayLIstBlock:hover {
+  cursor: pointer;
+  .play-circle {
+    background-color: rgba(235, 132, 235, 0.3);
+    visibility: visible;
+    font-size: 27px;
+  }
+}
+.PlayLIstBlock {
+  .MuiSvgIcon-root{
+    color: #fff;
+    font-size: 4rem;
+    left: -5px;
+    top: -5px;
+    position: relative;
+  } 
+}
+.Playlist_Change_name{
+  background-color: brown;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 190px;
+  top: 8px;
+}
+.Pensil{
+  color: white;
+}

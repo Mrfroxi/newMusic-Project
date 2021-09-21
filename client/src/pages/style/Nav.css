@@ -1,0 +1,51 @@
+.Nav-logo{
+  max-width: 100px;
+    height: 98px;
+    cursor: pointer;
+}
+.NavBar{
+  background-color: #eb04eb;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.NavBar_PartLogo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Nav_trackList{
+  position: absolute;
+  min-width: 180px;
+  display: none;
+  border-radius: 10px;
+  background-color: crimson;
+  z-index: 15;
+}
+.Nav_trackListBlock{
+  position: relative;
+}
+.Nav_trackListBlock:hover > .Nav_trackList{
+  display: block;
+}
+.Nav_trackListBtn{
+  cursor: pointer;
+}
+.Nav_trackListItem{
+  padding: 8px;
+  position: relative;
+  left: -30px;
+  font-size: 15px;
+  z-index: 15;
+}
+.Nav_trackListItem:hover{
+cursor: pointer;
+}
+.Nav_trackListText{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.Nav_trackListBlock{
+  margin: 2px;
+}

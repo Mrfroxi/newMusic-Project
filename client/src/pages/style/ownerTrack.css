@@ -1,0 +1,31 @@
+.onwTrack{
+  display: flex;
+  flex-direction: column;
+
+}
+.block-dispatch{
+  display: flex;
+  flex-direction: row;
+}
+.ownerBlock{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.onwTrackMainText{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 27px;
+}
+.BtnAddmusic{
+  background-color: blueviolet;
+  border-radius: 50%;
+}
+.Send{
+  width: 30px;
+  height: 30px;
+  color: chartreuse;
+}
+.Btn_Send_Text{
+  color: #fff;
+}

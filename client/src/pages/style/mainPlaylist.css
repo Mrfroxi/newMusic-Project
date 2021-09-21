@@ -1,0 +1,30 @@
+.PlayListSearchBlock{
+  padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.PlayListMainText{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 27px;
+}
+.PlayLIstImg{
+  width: 230px;
+  height: 200px;
+}
+.PlayLIstBlock{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 240px;
+}
+.play-circle {
+  position: absolute;
+  visibility: hidden;
+  border-radius: 10px;
+  width: 90%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

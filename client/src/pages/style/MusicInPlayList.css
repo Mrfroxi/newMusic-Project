@@ -1,0 +1,24 @@
+.PlayList_Track{
+display: flex;
+flex-direction: row;
+
+margin-top: 10px;
+border:  4px double black;
+border-radius: 10px;
+}
+.PlayListTrackText{
+  color:red;
+  font-size: 27px;
+}
+.PlayListTrackImg{
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+}
+.PlayList_Track:hover{
+  cursor: pointer;
+}
+.MainTextPlayList{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 27px;
+}

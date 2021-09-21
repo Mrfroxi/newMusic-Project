@@ -1,0 +1,7 @@
+.Admin_div{
+  display: flex;
+  flex-direction: row;
+}
+.ListGroup{
+  margin: 40px;
+}

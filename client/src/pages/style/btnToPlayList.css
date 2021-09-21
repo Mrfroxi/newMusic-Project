@@ -1,0 +1,40 @@
+.BtnToPlayList{
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 160px;
+  left: 15px;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.BtnToPlayList:hover >.List_Btn{
+  display: block;
+}
+.BtnToPlayList:hover{
+  background-color: steelblue;
+}
+
+.List_Btn{
+  position: absolute;
+  top:40px;
+  left: 0;
+  min-width: 180px;
+  display: none;
+  border-radius: 10px;
+  background-color: crimson;
+  z-index: 15;
+}
+.Elem_btn{
+  padding: 8px;
+  position: relative;
+  left: -24px;
+}
+.Elem_btn:hover{
+color: springgreen;
+}

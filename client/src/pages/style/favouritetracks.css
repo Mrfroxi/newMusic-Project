@@ -1,0 +1,15 @@
+    
+.FavouriteTracksName{
+  /* margin: 0 auto;
+  text-align: center; */
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 27px;
+}
+.musicListGroup{
+  display: flex;
+  flex-direction: row;
+}
+.FavInput{
+  padding: 15px;
+}
