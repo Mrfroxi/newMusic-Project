@@ -8,7 +8,6 @@ function CardPlayListTrack({elem}) {
   
   const {trackId , playListId} = elem
   const dispatch = useDispatch();
-  console.log(playListId)
   function handlePlay() {
     dispatch(setCurrentPlaying(elem))
     dispatch(increaseTimesPlayed(elem.id));

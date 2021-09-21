@@ -6,11 +6,10 @@ import {PLAYLIST_ITEM} from '../../../utils/consts'
 import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
 import  './playList.css'
 import  './playList.scss'
-import Pensil from '../../../accets/pensil.js'
-import { takeplayTrackLists } from '../../../http/playListAPI'
+import { takeplayTrackLists ,takeNamePlayList } from '../../../http/playListAPI'
 function PlayList(props) {
 
-  const{id,name,img,handleOpen,changeId} = props
+  const{id,name,img,changeId} = props
   const history = useHistory()
   const dispatch = useDispatch()
   const selectedPlayList = () => {
@@ -18,17 +17,15 @@ function PlayList(props) {
     history.push(PLAYLIST_ITEM+'/'+id)
   }
   const selectedPlayMusic = (e) => {
+
     e.stopPropagation()
+    takeNamePlayList(id).then(data => {
+      dispatch({type:'SET_SELECTED_PLAYLIST_NAME' , id:id , name : data.name})
+    })
     takeplayTrackLists(id).then(data => {
-      console.log(data)
       changeId(id)
       dispatch({type:'GET_ALL_PlayList_Track' , allPlayList:[...data]})
     })
-  }
-  const changeName = (e) => {
-    e.stopPropagation()
-    changeId(id)
-    handleOpen()
   }
   return (
 
@@ -38,9 +35,6 @@ function PlayList(props) {
           <div className="PlayLIstBlock" onClick={selectedPlayList}>
             <img className="PlayLIstImg" src={process.env.REACT_APP_API_URL + img} alt="#"  />
             <div className="play-circle">
-              <div className="Playlist_Change_name" onClick={changeName}> 
-                <Pensil className="Pensil"/>
-              </div>
                 <PlayCircleFilledWhiteIcon onClick={selectedPlayMusic}/>
             </div>
             {name}

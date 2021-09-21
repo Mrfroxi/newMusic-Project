@@ -34,8 +34,11 @@ export const takeInputplayListLists = async(text) =>{
   return data
 }
 export const changeNamePlayList = async(id,name) => {
-  console.log(id)
   console.log(name)
   const {data} = await authHost.put('/api/playList/changeName',{id,name})
+  return data
+}
+export const takeNamePlayList = async(id) => {
+  const {data} = await authHost.get('/api/playList/playListName/'+id)
   return data
 }

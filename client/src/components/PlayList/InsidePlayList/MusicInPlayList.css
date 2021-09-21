@@ -22,3 +22,20 @@ border-radius: 10px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 27px;
 }
+.Pen{
+  background-color: red;
+  position: relative;
+}
+.Playlist_Change_name_Pen{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+.Playlist_Change_name_Pen:hover{
+  cursor: pointer;
+}
+.MainTextPlayList_Block{
+  display: flex;
+  flex-direction: row;
+}

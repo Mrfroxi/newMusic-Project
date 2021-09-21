@@ -18,7 +18,7 @@ import { setCurrentPlaying} from "../../../actions/actionsPlayList";
 import Button from "@material-ui/core/Button";
 function FooterPlayListMusicPlayer({idPlayList}) {
 
-    const [{id, name, img,nameTrack}, setCurrTrack] = useState({});
+    const [{name, img,nameTrack}, setCurrTrack] = useState({});
 
     const [isRepeatClicked, setRepeatClick] = useState(false);
     const [isPrevClicked, setPrevClicked] = useState(false);
@@ -34,7 +34,7 @@ function FooterPlayListMusicPlayer({idPlayList}) {
 
     const audioElement = useRef();
     const dispatch = useDispatch();
-    const {selectPlayList} = useSelector(state => state.playListReducer);
+    const {selectPlayList,selectPlayListName} = useSelector(state => state.playListReducer);
     const useStyle = useContext(ThemeContext);
     const pointer = { cursor: "pointer",  color: useStyle.theme };
 
@@ -158,7 +158,10 @@ function FooterPlayListMusicPlayer({idPlayList}) {
                     onClick={handleBannerToggle}
                     className="curr-music-container">
                 <div className="curr-music-details">
-                    <div> 111111111111</div>
+                    <div className="NamePlayList"> 
+                        <p className="NamePlayListText">PlayList: </p>
+                    {selectPlayListName}                   
+                    </div>
                     {
                         name?
                         

@@ -36,18 +36,22 @@ export const playListReducer = (state=defaultState,action ) =>{
       case "SET_SELECTED_PLAYLIST_NAME":
         return {
           ...state,
-          playList:state.playList.map((elem) => {
-            if(elem.id === action.id){
-              state.selectPlayListName = `${action.name}`
-            }
-            return elem
-          })
+          selectPlayListName:action.name
         }
         case "ADD_NEW_PLAYLIST":
           return {
             ...state,
             playList:[...state.playList,action.newPlaylist]
           }
+          case "CHANGE_PLAYLIST_NAME":
+            return {
+              ...state,
+              playList:state.playList.map((elem) => {
+                if(elem.id === action.id){
+                return  elem.name = action.name
+                }
+              })
+            }
     default:
       return state
   }

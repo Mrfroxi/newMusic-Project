@@ -67,7 +67,6 @@ function MainPlayLists() {
           />
       })}
         <ModalCreatePlayList show={ownerVisible} handleClose={() => setownerVisible(false)}/>
-        <ModalChangePlayListName id={idPlayList} show={NameownerVisible} handleClose={() => setNameownerVisible(false)}/>
         {
       currMusic
          ?

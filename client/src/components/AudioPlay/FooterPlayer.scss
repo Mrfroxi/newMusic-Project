@@ -25,7 +25,16 @@
     }
   }
 }
-
+.NamePlayListText{
+  font-size: 15px;
+  padding-right: 5px;
+}
+.NamePlayList{
+  display: flex;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
 .curr-music-container {
   justify-content: flex-start !important;
   flex-grow: 1;
