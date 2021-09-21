@@ -1,22 +1,17 @@
-import {MAIN_ROUTE,LOGIN_ROUTE,REGISTRATION_ROUTE,ADMIN_ROUTE,PLAYLIST_ITEM} from "./utils/consts"
-import Auth from './pages/Auth'
-import Main from './pages/Main'
-import Admin from "./pages/Admin"
-import UsersList from "./components/usersList"
-import ElementPlayList from './components/trackInPlayList'
-import OwnerTrack from './components/ownerTrack'
-import PersonMusic from './components/personMusic'
-import PlayLists from './components/mainPlayLists'
-import MainPlayLists from './components/mainPlayLists'
-import AdminTracksList from './components/admintracks'
+import {MAIN_ROUTE,LOGIN_ROUTE,REGISTRATION_ROUTE,PLAYLIST_ITEM} from "./utils/consts"
+import Auth from './screens/Auth/Auth'
+import Main from './screens/Main/Main'
+import UsersList from "./components/AdminComponents/Users/usersList"
+import ElementPlayList from './components/PlayList/InsidePlayList/trackInPlayList'
+import OwnerTrack from './components/MusicCard/OwnerTrack/ownerTrack'
+import PersonMusic from './components/FavTracks/personMusic'
+import PlayLists from './components/PlayList/MainPlayListScreen/mainPlayLists'
+import MainPlayLists from './components/PlayList/MainPlayListScreen/mainPlayLists'
+import AdminTracksList from './components/AdminComponents/AdminTracks/admintracks'
 export const authRoutes = [
   {
     path:LOGIN_ROUTE,
     Component:Auth
-  },
-  {
-    path:ADMIN_ROUTE,
-    Component:Admin
   },
   {
     path:MAIN_ROUTE,
@@ -25,10 +20,6 @@ export const authRoutes = [
 ]
 
 export const publicRoutes = [
-  {
-    path:ADMIN_ROUTE,
-    Component:Admin
-  },
   {
     path:LOGIN_ROUTE,
     Component:Auth

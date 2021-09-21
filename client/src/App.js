@@ -1,10 +1,9 @@
 import React,{ useEffect } from 'react'
-import AppRouter from './components/appRouter';
-import NavBar from './components/navBar'
-import {useSelector,useDispatch} from 'react-redux'
+import AppRouter from './components/MainRouter/appRouter';
+import NavBar from './components/NavBar/navBar'
+import {useDispatch} from 'react-redux'
 import {takeTrack,takeFavouriteTrack} from './http/trackAPI'
 import {takeusers} from './http/adminAPI'
-import {takeplayLists} from './http/playListAPI'
 function App() { 
   const dispatch = useDispatch()
   useEffect(() => {
