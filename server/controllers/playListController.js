@@ -65,6 +65,13 @@ class PlayListController {
     const playList = await PlayList.findOne({ where: { id } });
     return res.json(playList);
   }
+  async getPlayListName(req, res) {
+    console.log(req)
+    const { id } = req.params;
+    const playList = await PlayList.findOne({ where: { id } });
+    const { name } = playList
+    return res.json({ name });
+  }
   async changeName(req, res) {
     const { name ,id } = req.body;
     console.log(id ,name)
