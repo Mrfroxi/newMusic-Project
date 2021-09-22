@@ -87,4 +87,4 @@ function MusicCardOwner({music}) {
     );
 }
 
-export default MusicCardOwner;
+export default React.memo(MusicCardOwner);

@@ -33,9 +33,9 @@ useEffect(()=>{
         <p className="PlayListTrackText">{elem.nameTrack}</p>:
         <p className="PlayListTrackText">{elem.name}</p>
       }
-         <Button onClick={deleteToPlayList}> Delete track from PlayList</Button>:
+         <Button className="Button_delete" onClick={deleteToPlayList}> Delete track from PlayList</Button>:
   </div>
     );
 }
 
-export default CardPlayListTrack;
+export default React.memo(CardPlayListTrack);

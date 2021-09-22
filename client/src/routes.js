@@ -8,7 +8,7 @@ import PersonMusic from './components/FavTracks/personMusic'
 import PlayLists from './components/PlayList/MainPlayListScreen/mainPlayLists'
 import MainPlayLists from './components/PlayList/MainPlayListScreen/mainPlayLists'
 import AdminTracksList from './components/AdminComponents/AdminTracks/admintracks'
-export const authRoutes = [
+export const publicRoutes = [
   {
     path:LOGIN_ROUTE,
     Component:Auth
@@ -17,9 +17,13 @@ export const authRoutes = [
     path:MAIN_ROUTE,
     Component:Main
   },
+  {
+    path:REGISTRATION_ROUTE,
+    Component:Auth
+  },
 ]
 
-export const publicRoutes = [
+export const authRoutes = [
   {
     path:LOGIN_ROUTE,
     Component:Auth

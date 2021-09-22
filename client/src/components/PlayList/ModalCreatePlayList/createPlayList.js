@@ -3,6 +3,7 @@ import {Button, Form} from 'react-bootstrap'
 import {useDispatch} from 'react-redux'
 import {Modal} from 'react-bootstrap'
 import {createPlaylist} from '../../../http/playListAPI'
+
 function ModalCreatePlayList({show,handleClose} ) {
 
   const dispatch = useDispatch()
@@ -49,4 +50,4 @@ function ModalCreatePlayList({show,handleClose} ) {
   </Modal>
   );
 }
-export default ModalCreatePlayList;
+export default React.memo(ModalCreatePlayList);

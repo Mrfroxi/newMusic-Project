@@ -1,9 +1,10 @@
 import React from 'react'
 import {Modal,Button} from 'react-bootstrap'
-import {useDispatch,useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import {Form} from 'react-bootstrap'
 import {changeNamePlayList} from '../../http/playListAPI'
-const ModalChangePlayListName = ({show,handleClose,id}) => {
+
+const ModalChangePlayListName = React.memo(({show,handleClose,id}) => {
 
   const [name,setName] = React.useState("")
   const dispatch = useDispatch()
@@ -38,5 +39,5 @@ const ModalChangePlayListName = ({show,handleClose,id}) => {
   </Modal>
   )
 
-}
+})
 export default ModalChangePlayListName

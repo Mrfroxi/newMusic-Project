@@ -3,9 +3,10 @@ import {Modal,Button} from 'react-bootstrap'
 import {useDispatch} from 'react-redux'
 import {authHost} from '../../http/index'
 import '../../pages/style/MusicCard.scss'
-const ModalMusic = ({show,handleClose} ) => {
+
+const ModalMusic = React.memo(({show,handleClose} ) => {
   const[newSong,setnewSong] = React.useState(null)
-  const[closed,setclosed] = React.useState(false)
+  const[closed,setclosed] = React.useState(true)
 
   const dispatch = useDispatch()
   const sendFile = React.useCallback( async () => {
@@ -64,5 +65,5 @@ const ModalMusic = ({show,handleClose} ) => {
   </Modal>
   )
 
-}
+})
 export default ModalMusic

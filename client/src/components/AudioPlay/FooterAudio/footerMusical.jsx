@@ -208,4 +208,4 @@ function FooterMusicPlayer(props) {
     );
 }
 
-export default FooterMusicPlayer;
+export default React.memo(FooterMusicPlayer);

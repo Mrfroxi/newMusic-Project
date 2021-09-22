@@ -1,15 +1,18 @@
 import React,{ useEffect,useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import {useSelector,useDispatch} from 'react-redux'
-import { takeplayTrackLists,takeNamePlayList } from '../../../http/playListAPI'
+import { takeplayTrackLists,takeNamePlayList,DeletePlayLists } from '../../../http/playListAPI'
 import './MusicInPlayList.css'
 import FooterMusicPlayer from "../../AudioPlay/FooterAudio/footerMusical";
 import FooterSelectMusic from "../../AudioPlay/PlaceMusic/footerSelectMusic";
 import CardPlayListTrack from './ColumnCard/cardPlayListTrack'
 import ModalChangePlayListName from '../../modals/modalChangeNamePlayList'
 import Pensil from '../../../accets/pensil.js'
-function ElementPlayList(props) {
+import { Button } from 'react-bootstrap'
+import { useHistory } from "react-router-dom"
 
+function ElementPlayList(props) {
+  const history = useHistory()
   const id = props.match.params.id
   const dispatch = useDispatch()
   useEffect (() => {
@@ -30,15 +33,24 @@ const changeName = (e) => {
 }
   const SelectTrack = useSelector(state => state.playListReducer.selectPlayList)
 
+const DeletePlayListAction = () =>{
+  DeletePlayLists(id).then( () => {
+    history.push('/main')
+  }
+  )
+}
   return (
     <>
     <Container>
       <div className="MainTextPlayList_Block"> 
-        <h1 className="MainTextPlayList">{selectPlayListName}</h1>
+      <div className="MainTextPlayList_BlockText">
+      <h1 className="MainTextPlayList">{selectPlayListName}</h1>
         <div className="Playlist_Change_name_Pen" onClick={changeName}> 
                 <Pensil className="Pen"/>
         </div>
         <h2 className="MainTextPlayListText">:</h2>
+      </div>
+      <Button className="Delete_btn" onClick={DeletePlayListAction}>Delete PlayList</Button>
         </div>
            {
              SelectTrack.map((elem) => {
@@ -59,4 +71,4 @@ const changeName = (e) => {
   );
 }
 
-export default ElementPlayList;
+export default React.memo(ElementPlayList);

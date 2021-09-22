@@ -10,6 +10,7 @@ import logo from '../../accets/music-logo.png'
 import './Nav.css';
 
 const NavBar = () =>{
+
   const dispatch = useDispatch()
   const user = useSelector(state=> {
     return state.UserReducer
@@ -30,25 +31,32 @@ const NavBar = () =>{
     dispatch({type:'logOut'})
   
   }
+  
 
   return (
     <Navbar className='NavBar' variant="dark" >
     <Container>
       <Nav className="NavBar_PartLogo">
-        <img src={logo} onClick={() => history.push(MAIN_ROUTE)} className='Nav-logo'/>
-        <div className='Nav_trackListBlock'>
-        <h5 className='Nav_trackListText'>Tracks</h5>
-          <ul className='Nav_trackList'>
-              <li className='Nav_trackListItem' onClick={() => history.push('/main/FavaouriteTrack')}>Favourite Tracks </li>
-              <li className='Nav_trackListItem' onClick={() => history.push('/main/YourTracks')}>Your Tracks</li>
-          </ul>
-      </div>
-      <div className='Nav_trackListBlock'>
-        <h5 className='Nav_trackListText'>PlayList</h5>
-          <ul className='Nav_trackList'>
-              <li className='Nav_trackListItem' onClick={() => history.push('/main/YourPlayList')}>Your PlayList</li>
-          </ul>
-      </div>
+        <img src={logo} onClick={() => history.push(MAIN_ROUTE)} className='Nav-logo' alt="#"/>
+        {user.__isAuth ?
+          <>
+                <div className='Nav_trackListBlock'>
+                <h5 className='Nav_trackListText'>Tracks</h5>
+                  <ul className='Nav_trackList'>
+                      <li className='Nav_trackListItem' onClick={() => history.push('/main/FavaouriteTrack')}>Favourite Tracks </li>
+                      <li className='Nav_trackListItem' onClick={() => history.push('/main/YourTracks')}>Your Tracks</li>
+                  </ul>
+              </div>
+              <div className='Nav_trackListBlock'>
+                <h5 className='Nav_trackListText'>PlayList</h5>
+                  <ul className='Nav_trackList'>
+                      <li className='Nav_trackListItem' onClick={() => history.push('/main/YourPlayList')}>Your PlayList</li>
+                  </ul>
+              </div>
+              </>
+              :
+              null  
+      }
       </Nav>
 
       {user.__isAuth ? 

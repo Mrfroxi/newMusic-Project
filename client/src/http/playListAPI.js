@@ -42,3 +42,7 @@ export const takeNamePlayList = async(id) => {
   const {data} = await authHost.get('/api/playList/playListName/'+id)
   return data
 }
+export const DeletePlayLists = async(id) =>{
+  const {data} = await authHost.delete('api/playList/'+id)
+  return data
+}

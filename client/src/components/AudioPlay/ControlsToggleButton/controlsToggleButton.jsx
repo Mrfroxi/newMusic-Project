@@ -31,4 +31,4 @@ function ControlsToggleButton(props) {
     );
 }
 
-export default ControlsToggleButton;
+export default React.memo(ControlsToggleButton);

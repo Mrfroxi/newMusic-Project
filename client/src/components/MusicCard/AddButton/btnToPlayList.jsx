@@ -2,6 +2,7 @@ import React from 'react';
 import './btnToPlayList.css';
 import {useSelector} from 'react-redux'
 import {AddlayTrackLists} from '../../../http/playListAPI'
+
 function BtnToPlayList(props) {
 
   const{id,name,img} = props
@@ -28,4 +29,4 @@ function BtnToPlayList(props) {
     );
 }
 
-export default BtnToPlayList;
+export default React.memo(BtnToPlayList);

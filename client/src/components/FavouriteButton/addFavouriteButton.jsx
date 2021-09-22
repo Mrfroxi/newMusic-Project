@@ -16,13 +16,11 @@ const FavouriteButton = React.memo((props) =>{
 
   useEffect(() =>{
     const isFavourite = favouriteTrack.some((elem) => {
-      console.log( elem.trackId === id)
       if(elem.trackId){
         return elem.trackId === id
       }
     return  elem.id === id
     });
-
     setIsFav(isFavourite);
   },[favouriteTrack])
 
@@ -34,7 +32,7 @@ const FavouriteButton = React.memo((props) =>{
       return item.trackId === id
     }
     return item.id === id
-  });
+    });
      AddtakeFavouriteTrack(id,name,img).then(() => dispatch({type:"ADD_FAVOURITE_TRACK" ,track:music}))
   }
   

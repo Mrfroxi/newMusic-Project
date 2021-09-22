@@ -1,7 +1,7 @@
 .PlayList_Track{
 display: flex;
 flex-direction: row;
-
+justify-content: space-between;
 margin-top: 10px;
 border:  4px double black;
 border-radius: 10px;
@@ -37,5 +37,28 @@ border-radius: 10px;
 }
 .MainTextPlayList_Block{
   display: flex;
+  flex-direction: row;
+}
+.Button_delete{
+  padding: 0;
+}
+.MainTextPlayList_Block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Delete_btn{
+  width: 180px;
+  height: 50px;
+  background-color: rgba(135, 27, 207, 0.664);
+  margin: 15px;
+  font-size: 14px;
+}
+.Delete_btn:hover{
+  background-color: red;
+}
+.MainTextPlayList_BlockText{
+  margin-top: 10px;
+  display:flex;
   flex-direction: row;
 }

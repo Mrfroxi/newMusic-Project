@@ -65,6 +65,6 @@ function MusicCard(props) {
     );
 }
 
-export default MusicCard;
+export default React.memo(MusicCard);
 
 

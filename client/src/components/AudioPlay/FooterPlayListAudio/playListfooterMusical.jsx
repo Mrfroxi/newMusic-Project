@@ -225,4 +225,4 @@ function FooterPlayListMusicPlayer({idPlayList}) {
     );
 }
 
-export default FooterPlayListMusicPlayer;
+export default React.memo(FooterPlayListMusicPlayer);

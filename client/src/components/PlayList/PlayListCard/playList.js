@@ -7,6 +7,7 @@ import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite"
 import  './playList.css'
 import  './playList.scss'
 import { takeplayTrackLists ,takeNamePlayList } from '../../../http/playListAPI'
+
 function PlayList(props) {
 
   const{id,name,img,changeId} = props
@@ -46,4 +47,4 @@ function PlayList(props) {
   );
 }
 
-export default PlayList;
+export default React.memo(PlayList);

@@ -6,6 +6,7 @@ import './musicList.css'
 import logo from '../../../accets/magnifier.jpg'
 import {takeTrack, takeInputTrack} from '../../../http/trackAPI'
 import {useDispatch} from 'react-redux'
+
 function MusicList() {
   const dispatch = useDispatch()
 
@@ -28,7 +29,7 @@ function MusicList() {
   
   return (
     <div className="musicList">
-       <div class="musicListGroup">      
+       <div class="musicListGroupBlock">      
         <input 
           className="musicListImput"
           type="text" 

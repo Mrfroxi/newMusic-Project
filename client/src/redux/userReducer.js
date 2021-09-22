@@ -7,6 +7,7 @@ const defaultState = {
 
   
   export const UserReducer = (state=defaultState,action ) =>{
+    console.log(action)
     switch(action.type){
       case "SetIsAuth":
         return {...state,__isAuth:true }
