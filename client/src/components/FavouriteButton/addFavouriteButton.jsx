@@ -25,7 +25,7 @@ const FavouriteButton = React.memo((props) => {
             return elem.id === id
         })
         setIsFav(isFavourite)
-    }, [favouriteTrack])
+    }, [favouriteTrack,id])
 
     const addMusic = (e) => {
         e.stopPropagation()

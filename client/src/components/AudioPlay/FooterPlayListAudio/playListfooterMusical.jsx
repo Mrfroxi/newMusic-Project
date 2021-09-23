@@ -16,7 +16,7 @@ import { ThemeContext } from '../Theme'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCurrentPlaying } from '../../../actions/actionsPlayList'
 import Button from '@material-ui/core/Button'
-function FooterPlayListMusicPlayer({}) {
+function FooterPlayListMusicPlayer() {
     const [{ name, img, nameTrack }, setCurrTrack] = useState({})
 
     const [isRepeatClicked, setRepeatClick] = useState(false)

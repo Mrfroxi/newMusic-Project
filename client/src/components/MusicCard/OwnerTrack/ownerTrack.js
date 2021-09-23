@@ -3,14 +3,12 @@ import { Button, Row } from 'react-bootstrap'
 import FooterMusicPlayer from '../../AudioPlay/FooterAudio/footerMusical'
 import FooterSelectMusic from '../../AudioPlay/PlaceMusic/footerSelectMusic'
 import MusicCardOwner from './Card/musicOwnerCard'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import ModalMusic from '../../modals/ownerMusic'
 import './ownerTrack.css'
 import Container from 'react-bootstrap/Container'
 import SendLogo from '../../../accets/sendLogo'
 const OwnerTrack = () => {
-    const dispatch = useDispatch()
-
     const [ownerVisible, setownerVisible] = useState(false)
 
     const [currMusic, setCurrMusic] = useState(null)

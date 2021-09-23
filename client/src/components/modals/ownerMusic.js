@@ -28,7 +28,7 @@ const ModalMusic = React.memo(({ show, handleClose }) => {
         } catch (e) {
             console.log(e)
         }
-    }, [newSong])
+    }, [newSong, closed, handleClose])
 
     return (
         <Modal show={show} onHide={handleClose} size="lg" centered>

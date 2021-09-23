@@ -24,7 +24,7 @@ function MusicCardOwner({ music }) {
     useEffect(() => {
         const isPublicTrack = publicTracks.some((elem) => elem.id === music.id)
         setisPublic(isPublicTrack)
-    }, [publicTracks])
+    }, [publicTracks, music.id])
 
     const Setclosed = (e) => {
         e.stopPropagation()

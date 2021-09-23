@@ -30,7 +30,7 @@ function ElementPlayList(props) {
                 name: data.name,
             })
         )
-    }, [])
+    }, [id])
 
     const [currMusic, setCurrMusic] = useState(null)
     const [NameownerVisible, setNameownerVisible] = useState(false)

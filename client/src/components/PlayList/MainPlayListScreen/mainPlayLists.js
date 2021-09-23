@@ -22,7 +22,7 @@ function MainPlayLists() {
                 setCurrMusic(elem)
             }
         })
-    }, [idPlayList])
+    }, [idPlayList,playList])
 
     const { playing } = useSelector((state) => state.musicReducer)
 

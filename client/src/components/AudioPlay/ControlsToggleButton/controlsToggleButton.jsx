@@ -15,7 +15,7 @@ function ControlsToggleButton(props) {
             setButton(!buttonType)
             props.onClicked(props.type, !buttonType)
         }
-    },[buttonType])
+    },[buttonType,props])
 
     return (
         <Button
